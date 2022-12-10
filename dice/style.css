@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LAYOUT */
+section {
+  position: relative;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+}
+
+/* ELEMENTS */
+.player {
+  flex: 50%;
+  padding: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+  opacity: 0.5;
+}
+.player__name {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.player__score {
+  font-size: 6rem;
+  font-weight: 300;
+  margin-bottom: auto;
+}
+.player__score-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.player--active {
+ background-color: #33333317;
+  opacity: 1;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 75%)
+}
+.player--active .player__name {
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 3px 3px rgb(0 0 0 / 50%);
+}
+.player--active .player__score {
+  font-weight: 400;
+}
+.player--active .rounds-won {
+  opacity: 1;
+}
+
+.rounds-won {
+  opacity: 0.5;
+  border-radius: 9px;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+.rounds-won__label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.rounds-won__score {
+  font-size: 3.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  padding: 0.7rem 2.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn--roll {
+  background-color: rgba(56, 247, 18, 0.6);
+  top: 22rem;
+}
+.btn--roll:hover {
+  background-color: rgba(56, 247, 18, 0.8);
+}
+.btn--stand {
+  background-color: rgba(247, 18, 18, 0.6);
+  color: #fff;
+  top: 26rem;
+}
+.btn--stand:hover {
+  background-color: rgba(247, 18, 18, 0.8);
+}
+.btn--reset {
+  top: 20px;
+  position: absolute;
+  left: 9.5%;
+  background-color: rgba(81, 195, 240, 0.6);
+  color: #ffffff;
+}
+.btn--reset:hover {
+  background-color: rgba(81, 195, 240, 0.8);
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 11.5rem;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.player--winner {
+  background-color: rgba(255, 215, 0, 0.8);
+  opacity: 1;
+}
+.player--winner .player__name {
+  font-weight: 700;
+}
+.player--winner .player__name,
+.player--winner .player__score,
+.player--winner .player__score-label,
+.player--winner .rounds-won,
+.player--winner .rounds-won__label,
+.player--winner .rounds-won__score {
+  color: #fff;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
