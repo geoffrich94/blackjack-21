@@ -1,2 +1,2 @@
 # blackjack-21
-Simple JavaScript game
+A game of 21 with a sleek, minimalistic UI built using vanilla JavaScript
